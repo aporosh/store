@@ -31,12 +31,3 @@ useEffect(() => {
 };
 
 export default App;
-
-/**
- *             <div className="container">
-                <Sidebar />
-              
-            </div>
-
-            <Footer />
- */

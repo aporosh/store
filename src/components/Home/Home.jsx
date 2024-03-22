@@ -8,8 +8,6 @@ import Products from "../Products/Products";
 import Categories from "../Categories/Categories";
 import Banner from "../Banner/Banner";
 
-
-
 const Home = () => {
     const dispatch = useDispatch();
     const { products: { list, filtered }, categories } = useSelector((state) => state);
