@@ -32,6 +32,22 @@ export const loginUser = createAsyncThunk(
     }
 })
 
+export const updateUser = createAsyncThunk(
+    'users/updateUser', 
+    async (payload, thunkAPI) => {
+    try {
+        const res = await axios.put(`${BASE_URL}/users/${payload.id}`, payload);
+        return res.data;
+    } catch(err) {
+        console.log(err);
+        return thunkAPI.rejectWithValue(err)
+    }
+})
+
+const addCurrentUser = (state, { payload }) => {
+        state.currentUser = payload;
+    };
+
 const userSlice = createSlice({
     name: "user",
     initialState: {
@@ -63,18 +79,9 @@ const userSlice = createSlice({
         },
     },
     extraReducers: (buider) => {
-        // buider.addCase(getCategories.pending, (state) => {
-        //     state.isLoading = true;
-        // });
-        buider.addCase(createUser.fulfilled, (state, { payload }) => {
-            state.currentUser = payload;
-        });
-        buider.addCase(loginUser.fulfilled, (state, { payload }) => {
-            state.currentUser = payload;
-        });
-        // buider.addCase(getCategories.rejected, (state) => {
-        //     state.isLoading = false;
-        // });
+        buider.addCase(createUser.fulfilled, addCurrentUser);
+        buider.addCase(loginUser.fulfilled, addCurrentUser);
+        buider.addCase(updateUser.fulfilled, addCurrentUser);
     },
 });
 
