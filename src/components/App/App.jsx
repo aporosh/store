@@ -7,6 +7,7 @@ import Footer from "../Footer/Footer";
 import Sidebar from "../Sidebar/Sidebar";
 import { getCategories } from "../../features/categories/categoriesSlice";
 import { getProducts } from "../../features/products/productsSlice";
+import UserForm from "../../features/user/UserForm";
 
 const App = () => {
 const dispatch = useDispatch();
@@ -19,12 +20,11 @@ useEffect(() => {
     return (
         <div className="app">
             <Header />
-
+            <UserForm />
             <div className="container">
                 <Sidebar />
                 <AppRoutes />
-            </div>
-            
+            </div>            
             <Footer />
         </div>
     );
