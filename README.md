@@ -1,29 +1,29 @@
 # Prototype of e-store 
 
 ## Backend
-    [Fake Store API](https://fakeapi.platzi.com/en/about/introduction/) was used for the project
-        
-    > Platzi Fake Store API can be used with any type of project that needs products, users, categories, authentication, and users in JSON format. You can use this API for prototyping e-commerce and learning about how to connect to an API with the best practices.
+[Fake Store API](https://fakeapi.platzi.com/en/about/introduction/) was used for the project
+    
+>Platzi Fake Store API can be used with any type of project that needs products, users, categories, authentication, and users in JSON format. You can use this API for prototyping e-commerce and learning about how to connect to an API with the best practices.
 
 ## Frontend
 
-    **Main packages:**
-    - react
-    - react-router-dom
-    - @reduxjs/toolkit
-    - react-redux
+**Main packages:**
+- react
+- react-router-dom
+- @reduxjs/toolkit
+- react-redux
 
-    **Main features:**
-    - Header, Footer 
-    - routing between pages
-    - Home page (many content)
-    - Category page (filtering, pagination)
-    - Product page (switch between product images, relations, adding to cart)
-    - Cart (count amount, total price, removing product from cart)
-    - Signup form (registration, switch to login form)
-    - Login form (authentication, authorization, switch to signup form)
-    - User profile (updating user data)
-    - search products (search by product name, dropdown list, switch to product page)
+**Main features:**
+- Header, Footer 
+- routing between pages
+- Home page (many content)
+- Category page (filtering, pagination)
+- Product page (switch between product images, relations, adding to cart)
+- Cart (count amount, total price, removing product from cart)
+- Signup form (registration, switch to login form)
+- Login form (authentication, authorization, switch to signup form)
+- User profile (updating user data)
+- search products (search by product name, dropdown list, switch to product page)
 
 
 
