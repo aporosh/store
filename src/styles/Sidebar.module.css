@@ -1,7 +1,7 @@
 .sidebar {
   width: 304px;
   padding: 24px;
-  height: 423px;
+  min-height: 423px;
   display: flex;
   flex-direction: column;
 }
@@ -16,6 +16,11 @@
   display: flex;
   flex-direction: column;
   row-gap: 12px;
+
+  min-height: 300px;
+  margin-bottom: 20px;
+  overflow-y: overlay;
+  scrollbar-width: thin;
 }
 
 .link {

@@ -65,8 +65,8 @@ const Product = (item) => {
                 </div>
                 <p className={styles.description}>{description}</p>
                 <div className={styles.actions}>
-                    <button className={styles.add} disabled={!currentSize}>Add to cart</button>
-                    <button onClick={addToCart} className={styles.favorite}>Add to favorite</button>
+                    <button onClick={addToCart} className={styles.add} disabled={!currentSize}>Add to cart</button>
+                    <button className={styles.favorite}>Add to favorite</button>
                 </div>
                 <div className={styles.bottom}>
                     <div className={styles.purchase}>23 people purchased</div>

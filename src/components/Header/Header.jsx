@@ -19,7 +19,7 @@ const Header = () => {
     const navigate = useNavigate();
 
     const [searchValue, setSearchValue] = useState('');
-    const { currentUser } = useSelector(({ user }) => user);
+    const { currentUser, cart } = useSelector(({ user }) => user);
 
     const [values, setValues] = useState({ name: "Guest", avatar: AVATAR });
 
@@ -61,7 +61,7 @@ const Header = () => {
                         <input
                             type="search"
                             name="search"
-                            placeholder="search for anything ..."
+                            placeholder="search for product ..."
                             autoComplete="off"
                             onChange={handleSearch}
                             value={searchValue}
@@ -75,10 +75,10 @@ const Header = () => {
                                     ? "No results"
                                     : data.map(({ title, images, id }) => {
                                         return (
-                                            <Link 
+                                            <Link
                                                 key={id}
                                                 onClick={() => setSearchValue("")}
-                                                className={styles.item} 
+                                                className={styles.item}
                                                 to={`/products/${id}`}>
                                                 <div
                                                     className={styles.image}
@@ -104,7 +104,10 @@ const Header = () => {
                         <svg className={styles["icon-cart"]}>
                             <use xlinkHref={`${process.env.PUBLIC_URL}/sprite.svg#bag`} />
                         </svg>
-                        <span className={styles.count}>2</span>
+                        {!!cart.length && (
+                            <span className={styles.count}>{cart.length}</span>
+                        )}
+
                     </Link>
                 </div>
             </div>
