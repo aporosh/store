@@ -1,4 +1,5 @@
 # Prototype of e-store 
+A prototype of a cute online store, with product search, product card, shopping cart, user profile and authorization.
 
 ## Backend
 [Fake Store API](https://fakeapi.platzi.com/en/about/introduction/) was used for the project
@@ -12,6 +13,7 @@
 - react-router-dom
 - @reduxjs/toolkit
 - react-redux
+- axios
 
 **Main features:**
 - Header, Footer 
