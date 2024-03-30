@@ -25,7 +25,7 @@ const Cart = () => {
       <h2 className={styles.title}>Your cart</h2>
 
       {!cart.length ? (
-        <div className={styles.empty}>Here is empty</div>
+        <div className={styles.empty}>It is empty now</div>
       ) : (
         <>
           <div className={styles.list}>
@@ -43,7 +43,7 @@ const Cart = () => {
                     <div className={styles.category}>{category.name}</div>
                   </div>
 
-                  <div className={styles.price}>{price}$</div>
+                  <div className={styles.price}>$ {price}</div>
 
                   <div className={styles.quantity}>
                     <div
@@ -75,7 +75,7 @@ const Cart = () => {
                     </div>
                   </div>
 
-                  <div className={styles.total}>{price * quantity}$</div>
+                  <div className={styles.total}>$ {price * quantity}</div>
 
                   <div
                     className={styles.close}
@@ -96,7 +96,7 @@ const Cart = () => {
             <div className={styles.total}>
               TOTAL PRICE:{" "}
               <span>
-                {sumBy(cart.map(({ quantity, price }) => quantity * price))}$
+              $ {sumBy(cart.map(({ quantity, price }) => quantity * price))}
               </span>
             </div>
 
